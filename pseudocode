@@ -1,0 +1,38 @@
+//questions
+1. The Mets are winning to world series next year
+2. 1 + 1 is equal to 2
+3. The Daily Show was better with Jon Stewart.
+4. Nickelback is actually not that bad
+5. Coding Boot camp is way harder than you can imagine
+6. Cats and Dogs are equally good
+7. You're trying to become a web-developer
+8. Travel is the best form of learning
+9. Exercise is important
+10. Russians hacked the election
+
+In home html create two buttons with anchor tags
+	..one button will have an anchor tag for the home page
+	..The other anchor tag will be used for the survey page
+
+post the questions to the server/make an  ajax request to the server  when the user selects the survery button
+
+Make 5 mock filled surveys and post them to the server
+store the surveys inside of an array, the array will contain objects
+var persons name = {question1 : answer};
+
+when the new user fills out the array the answers will then be compared to each predefined survey,
+
+go through each question one by one  and get the absolute value of the difference between the 2 answers
+
+and the differences up and store them in a variable
+do this for each comparison 
+at the end compare, who ever has the lowest comparison score is the most compatible 
+
+post the new user to the server
+
+
+
+
+
+then start the app
+when the user fills out the questions then compare
