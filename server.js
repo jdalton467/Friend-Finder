@@ -19,17 +19,10 @@ app.use(bodyParser.json({
     type: "application/vnd.api+json"
 }));
 
-app.get('/test', function(req, res){
-	res.end('test')
-})
 
-app.get('/test', function(req, res){
-	res.end('this will never run')
-})
-
-var apiRouteFunction = require("./app/routing/apiRoutes")
-apiRouteFunction(app)
-// same as before
+// var apiRouteFunction = require("./app/routing/apiRoutes")
+// apiRouteFunction(app)
+    // same as before
 require("./app/routing/apiRoutes")(app);
 
 

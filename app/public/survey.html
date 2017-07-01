@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../style/style.css">
   </head>
   <body>
     <div class="container">
@@ -28,7 +29,7 @@
               <input type="name" class="form-control" id="name" placeholder="name">
             </div>
             <div class="form-group">
-              <label for="photo">Link to Photo Image</label>
+              <label for="photo">Link to Photo Image (required)</label>
               <input type="photo" class="form-control" id="photo" placeholder="photo">
             </div>
           </form>
@@ -192,24 +193,38 @@
     </div>
   </footer>
 </div>
+
+<div id="resultsModal" class="modal fade" role="dialog" style="display: none">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Your Match</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="matchName"></h2>
+        <img id="matchImg" src="" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 <script>
 $("#submit").on("click", function(event) {
-event.preventDefault();
-// Here we grab the form elements
-// var newReservation = {
-// customerName: $("#reserve-name").val().trim(),
-// phoneNumber: $("#reserve-phone").val().trim(),
-// customerEmail: $("#reserve-email").val().trim(),
-// customerID: $("#reserve-unique-id").val().trim()
-// };
-// console.log(newReservation);
+event.preventDefault()
+
+
 var newFriend = {
 name: $("#name").val().trim(),//grabbing values from the form and the survey questions
 photo: $("#photo").val().trim(),
 scores:[
-$("#Select1").val().trim(),
+$("#Select1").val(),
 $("#Select2").val(),
 $("#Select3").val(),
 $("#Select4").val(),
@@ -221,16 +236,35 @@ $("#Select9").val(),
 $("#Select10").val()
 ]
 };
-console.log(newFriend);
-var userscores = [];
-for(i = 0; i<newFriend.scores.length; i++){ //pushing the new user scores one character at a time into a new array of scores only
-console.log(parseInt(newFriend.scores[i]));
-userscores.push(parseInt(newFriend.scores[i]));
-}
-console.log(userscores);
+// console.log(newFriend);
+// var userscores = [];
+// for(i = 0; i<newFriend.scores.length; i++){ //pushing the new user scores one character at a time into a new array of scores only
+// console.log(parseInt(newFriend.scores[i]));
+// userscores.push(parseInt(newFriend.scores[i]));
+// }
+// console.log(userscores);
+
+var currentURL = window.location.origin;
+
+$.post("api/friends", newFriend, function(data){
+  // console.log()
+
+ 
+  $(".matchName").text(data.name);
+  $("#matchImg").attr("src",data.photo);
+  $("#matchImg").attr("alt",data);
+  $("#resultsModal").modal('toggle');
+  
+  // console.log($("#matchImg").attr("src",data));
+});
 
 
 
+
+
+
+
+//clearing the form fields
 $("#name").val("");
 $("#photo").val("");
 $("#Select1").val("Choose...");
@@ -243,7 +277,8 @@ $("#Select7").val("Choose...");
 $("#Select8").val("Choose...");
 $("#Select9").val("Choose...");
 $("#Select10").val("Choose...");
-});
 
+
+});
 
 </script>

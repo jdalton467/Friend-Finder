@@ -3,8 +3,8 @@
 
 friendsArray=[
 {
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Johnny",
+  "photo":"https://vignette3.wikia.nocookie.net/fictionalcharacters/images/9/9a/Johnny_Bravo.png/revision/latest?cb=20131031032341",
   "scores":[
       5,
       1,
@@ -19,8 +19,8 @@ friendsArray=[
     ]
 },
 {
-  "name":"Joe",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Stewie",
+  "photo":"https://s-media-cache-ak0.pinimg.com/736x/4b/53/55/4b53554766a2ed8fe948c08b09f37b1b--stewie-griffin-griffins.jpg",
   "scores":[
       4,
       3,
@@ -35,8 +35,8 @@ friendsArray=[
     ]
 },
 {
-  "name":"Kimberly",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Leela",
+  "photo":"http://coachellavalleyweekly.com/wp-content/uploads/2013/11/katey-segal-leela.jpg",
   "scores":[
       4,
       5,
@@ -51,8 +51,8 @@ friendsArray=[
     ]
 },
 {
-  "name":"Donna",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Daria",
+  "photo":"https://blog.etsy.com/en/files/2015/06/10984-daria.png",
   "scores":[
       2,
       1,
@@ -65,7 +65,24 @@ friendsArray=[
       3,
       3
     ]
+},
+{
+  "name":"Homer",
+  "photo":"https://alexraphael.files.wordpress.com/2013/09/homer-simpson.jpg",
+  "scores":[
+      4,
+      2,
+      3,
+      5,
+      1,
+      1,
+      1,
+      1,
+      5,
+      5
+    ]
 }
+
 ];
 
 module.exports = friendsArray;
