@@ -1,7 +1,7 @@
 # Friend-Finder
 
 
-Simple survey app that matched the user with a compatible friend based on the answers from a ten question survey
+Simple survey app that matched the user with a compatible friend based on the answers from a ten question survey.
 
 User must fill out two fields on the form, their name and a picture. 
 
