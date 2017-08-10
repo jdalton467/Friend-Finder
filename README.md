@@ -15,7 +15,7 @@ All fields must be filled out before submitting!
 * Body-Parser
 
 # Comparison Algorithm
- var convertScores = [];//will contain all parsed scores from a user
+    var convertScores = [];//will contain all parsed scores from a user
     var allDifferences = []; //will contain all difference scores to be compared later on
     var eachDifference = 0; // setting the initial value of individual differences to 0
     // console.log(req.body.scores);
