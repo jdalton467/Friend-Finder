@@ -10,9 +10,9 @@ Below the form are ten questions that the user must fill out. Once the user clic
 All fields must be filled out before submitting!
 
 # Built With
-Node
-Express
-Body-Parser
+* Node
+* Express
+* Body-Parser
 
 # Screenshots
 
